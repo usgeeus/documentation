@@ -134,7 +134,7 @@ A LINK premium is then added to the total gas cost. The premium is divided in tw
 
 ```
 (Coordinator premium
-  + (total gas cost * (1 + Wrapper premium percentage)) = total request cost
+  + (total gas cost * (1 + Wrapper premium percentage))) = total request cost
 ```
 
 </Fragment>
@@ -292,7 +292,7 @@ For VRF Arbitrum transactions, add a buffer to estimate the additional L1 cost:
 (L2GasPrice
    * (Verification gas
       + Callback gas
-      + L1 calldata gas buffer))) = total estimated gas cost
+      + L1 calldata gas buffer)) = total estimated gas cost
 ```
 
 To calculate the L1 callback gas buffer:
@@ -315,7 +315,7 @@ This conversion allows us to estimate the L1 callback gas cost and incorporate i
 (L2GasPrice
    * (Verification gas
       + Callback gas
-      + ((calldataSizeBytes * L1PricePerByte) / L2GasPrice)))) = total estimated gas cost
+      + ((calldataSizeBytes * L1PricePerByte) / L2GasPrice))) = total estimated gas cost
 ```
 
 </Fragment>
@@ -334,7 +334,7 @@ For VRF Arbitrum transactions, add a buffer to estimate the additional L1 cost:
    * (Verification gas
       + Callback gas
       + Wrapper gas overhead
-      + L1 calldata gas buffer))) = total estimated gas cost
+      + L1 calldata gas buffer)) = total estimated gas cost
 ```
 
 To calculate the L1 callback gas buffer:
